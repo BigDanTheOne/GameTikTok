@@ -1,0 +1,36 @@
+@import ../../styles/vars
+
+.footer
+  position: fixed
+  bottom: 0
+  height: $footerHeight
+  width: 100vw
+  background-size: 100% 100%
+  display: flex
+  justify-content: space-between
+  align-items: center
+
+$centerOffset: 10vw
+.group
+  display: flex
+  justify-content: space-around
+  flex: 1
+  height: 100%
+  &:first-child
+    margin-right: $centerOffset
+  &:last-child
+    margin-left: $centerOffset
+
+.likeActive
+  animation: like
+  animation-duration: .5s
+
+@keyframes like
+  0%
+    transform: scale(1)
+  30%
+    transform: scale(1.5)
+  70%
+    transform: scale(1.5)
+  100%
+    transform: scale(1)

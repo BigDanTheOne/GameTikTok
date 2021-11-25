@@ -1,0 +1,25 @@
+@import ../../styles/vars
+  
+.slider
+  position: absolute !important
+  left: 50%
+  bottom: calc(100% - 10vw)
+  transform: translate(-50%, 20px)
+  height: 70vh
+  width: 100%
+  pointer-events: none
+  display: flex
+  justify-content: center
+
+.thumb
+  height: 15vw
+  width: 15vw
+  background-position: center center
+  background-size: 8vw
+  border: none
+  background-color: $dark
+  background-repeat: no-repeat
+  border-radius: 50%
+  outline: none
+  pointer-events: all
+  transform: translateY(-25%)

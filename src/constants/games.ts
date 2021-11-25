@@ -1,0 +1,88 @@
+import { IGame } from '../types'
+
+export default [
+  {
+    id: 1,
+    src: 'games/test1',
+    name: '1',
+    paused: false,
+    liked: false,
+  },
+  {
+    id: 2,
+    src: 'games/test2',
+    name: '2',
+    paused: false,
+    liked: false,
+  },
+  {
+    id: 3,
+    src: 'games/test3',
+    name: '3',
+    paused: false,
+    liked: false,
+  },
+  {
+    id: 4,
+    src: 'games/test4',
+    name: '4',
+    paused: false,
+    liked: false,
+  },
+  {
+    id: 5,
+    src: 'games/test1',
+    name: '5',
+    paused: false,
+    liked: false,
+  },
+  {
+    id: 6,
+    src: 'games/test2',
+    name: '6',
+    paused: false,
+    liked: false,
+  },
+  {
+    id: 7,
+    src: 'games/test3',
+    name: '7',
+    paused: false,
+    liked: false,
+  },
+  {
+    id: 8,
+    src: 'games/test4',
+    name: '8',
+    paused: false,
+    liked: false,
+  },
+  {
+    id: 9,
+    src: 'games/test1',
+    name: '9',
+    paused: false,
+    liked: false,
+  },
+  {
+    id: 10,
+    src: 'games/test2',
+    name: '10',
+    paused: false,
+    liked: false,
+  },
+  {
+    id: 11,
+    src: 'games/test3',
+    name: '11',
+    paused: false,
+    liked: false,
+  },
+  {
+    id: 12,
+    src: 'games/test4',
+    name: '12',
+    paused: false,
+    liked: false,
+  },
+] as IGame[]
