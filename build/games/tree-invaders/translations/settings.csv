@@ -1,0 +1,12 @@
+keys,en,de
+HEADING_SOUND_VOLUME,Sound Volume,Geräuschlautstärke
+SOUND_VOLUME_GAMEPLAY,Gameplay,Gameplay
+SOUND_VOLUME_RAIN,Rain,Regen
+HEADING_PARTICLES,Particle Effects,Partikeleffekte
+PARTICLES_RAIN,Rain,Regen
+PARTICLES_EXPLOSIONS,Explosions,Explosionen
+SCREEN_SHAKE,Screen Shake,Bildschirm-Wackeln
+HEADING_DAY_NIGHT_CYCLE,Time of Day,Tageszeit
+DAY_NIGHT_CYCLE_MODE_0,Day-Night-Cycle,Tagesverlauf
+DAY_NIGHT_CYCLE_MODE_1,Always Day,Immer Tag
+DAY_NIGHT_CYCLE_MODE_2,Always Night,Immer Nacht

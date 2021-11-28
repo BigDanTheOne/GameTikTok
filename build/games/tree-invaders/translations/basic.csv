@@ -1,0 +1,9 @@
+keys,en,de
+GAME_OVER,Game Over,Spiel beendet
+RESTART,"[R] / [Middle Mouse Button] Restart","[R] / [Mittlere Maustaste] Nochmal spielen"
+RESTART_ANDROID,"Restart","Nochmal spielen"
+CONTROLS,"[2nd Mouse Button] (Un-)Pause
+[H] Show / Hide Mouse Pointer","[2te Maustate] (Un-)Pausieren
+[H] Mauszeiger verstecken/anzeigen"
+PAUSE_BUTTON,Pause,Pausieren
+UNPAUSE_BUTTON,Unpause,Weiterspielen

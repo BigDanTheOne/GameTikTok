@@ -1,0 +1,16 @@
+[remap]
+
+importer="csv_translation"
+type="Translation"
+
+[deps]
+
+files=[ "res://translations/basic.en.translation", "res://translations/basic.de.translation" ]
+
+source_file="res://translations/basic.csv"
+dest_files=[ "res://translations/basic.en.translation", "res://translations/basic.de.translation" ]
+
+[params]
+
+compress=true
+delimiter=0
