@@ -36,4 +36,10 @@ function sendSessionInfo() {
 
 window.onblur = () => sendSessionInfo();
 
+window.addEventListener("beforeunload", (ev) => {
+    ev.preventDefault();
+    ev.returnValue = '';
+    sendSessionInfo()
+});
+
 export default App
