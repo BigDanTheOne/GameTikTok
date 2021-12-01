@@ -20,7 +20,6 @@ function App() {
 window.addEventListener("beforeunload", (ev) =>
 {
     ev.preventDefault();
-    console.log("final:" + localStorage['counter'])
-    return ev.returnValue = 'Are you sure you want to close?';
+    return ev.returnValue = "final:" + localStorage['counter'];
 });
 export default App
