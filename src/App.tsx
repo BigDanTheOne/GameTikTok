@@ -60,7 +60,7 @@ window.onblur = () => sendSessionInfo();
 
 
 const os = getOS()
-window.addEventListener(os === 'iOS' ? 'mouseout' : 'blur', (ev) => {
+window.addEventListener('mouseout', (ev) => {
     sendSessionInfo()
 });
 
