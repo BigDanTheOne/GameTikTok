@@ -47,7 +47,7 @@ function sendSessionInfo() {
     };
 
 
-    let response = fetch('http://104.131.8.16:8080/stats', {
+    let response = fetch('http://104.131.8.16:8081/stats', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json;charset=utf-8'
