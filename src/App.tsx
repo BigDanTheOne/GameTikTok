@@ -24,6 +24,8 @@ window.addEventListener("beforeunload", (ev) => {
         timings: [1, 2, 3]
     };
 
+    fetch('http://104.131.8.16:8080/stats?a=b')
+
     let response = fetch('http://104.131.8.16:8080/stats', {
         method: 'POST',
         headers: {
