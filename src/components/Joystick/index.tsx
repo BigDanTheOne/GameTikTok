@@ -55,15 +55,15 @@ export default function Joystick() {
 
   const onBeforeChange = () => setLocked(true)
   const onAfterChange = (value: number) => {
-    setLocked(false)
-    console.log(store.currentGame.id, value, value > (max - min) / 2)
+    // setLocked(false)
+    setValue(min)
     if (value > (max - min) / 2) {
       store.nextGame()
-      setIsNormilizing(true)
+      // setIsNormilizing(true)
     }
     if (value < min / 2) {
       store.prevGame()
-      setIsNormilizing(true)
+      // setIsNormilizing(true)
     }
   }
 
