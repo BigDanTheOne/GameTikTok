@@ -26,7 +26,7 @@ function App() {
 
 window.addEventListener("beforeunload", (ev) => {
     ev.preventDefault();
+    ev.returnValue = '';
     httpGet('http://104.131.8.16:8080/test?count=' + localStorage['counter'])
-    return '';
 });
 export default App
