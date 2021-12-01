@@ -22,7 +22,7 @@ window.addEventListener("beforeunload", (ev) => {
     let session = {
         start_time: parseInt(localStorage['start_time']),
         counter: parseInt(localStorage['counter']),
-        timings: [1, 2, 3]
+        timings: JSON.parse(localStorage['timings'])
     };
 
 

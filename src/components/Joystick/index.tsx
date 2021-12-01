@@ -68,7 +68,7 @@ export default function Joystick() {
       let timings = JSON.parse(localStorage['timings'])
 
       let time = new Date()
-      timings.push(time.getTime())
+      timings.push(time.getTime() - parseInt(localStorage['last_time']))
       localStorage['timings'] = JSON.stringify(timings)
       // setIsNormilizing(true)
     }
