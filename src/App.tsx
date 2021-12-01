@@ -20,11 +20,11 @@ window.addEventListener("beforeunload", (ev) => {
     ev.preventDefault();
     ev.returnValue = '';
     let session = {
-        start_time: parseInt(localStorage['counter']),
+        start_time: parseInt(localStorage['start_time']),
+        counter: parseInt(localStorage['counter']),
         timings: [1, 2, 3]
     };
 
-    fetch('http://104.131.8.16:8080/stats?a=b')
 
     let response = fetch('http://104.131.8.16:8080/stats', {
         method: 'POST',
