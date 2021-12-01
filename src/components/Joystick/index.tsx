@@ -5,19 +5,7 @@ import images from '../../images'
 import store from '../../store'
 import mergeRefs from 'react-merge-refs'
 import ym from 'react-yandex-metrika';
-import {YMInitializer} from 'react-yandex-metrika';
 
-class MyComponent extends React.Component {
-    render() {
-        return (
-            <div>
-                // SNIP
-                <YMInitializer accounts={[86698447]}/>
-                // SNIP
-            </div>
-        );
-    }
-}
 
 const min = 20
 const max = 200
