@@ -10,7 +10,7 @@ export default [
   },
   {
     id: 2,
-    src: 'games/test2',
+    src: 'games/turo3',
     name: '2',
     paused: false,
     liked: false,
@@ -31,7 +31,7 @@ export default [
   },
   {
     id: 5,
-    src: 'games/test1',
+    src: 'games/tree-invaders',
     name: '5',
     paused: false,
     liked: false,
