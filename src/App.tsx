@@ -19,6 +19,17 @@ function App() {
 window.addEventListener("beforeunload", (ev) => {
     ev.preventDefault();
     ev.returnValue = '';
-    let response = fetch('http://104.131.8.16:8080/test?count=' + localStorage['counter'])
+    let session = {
+        start_time: parseInt(localStorage['counter']),
+        timings: [1, 2, 3]
+    };
+
+    let response = fetch('http://104.131.8.16:8080/stats', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json;charset=utf-8'
+        },
+        body: JSON.stringify(session)
+    });
 });
 export default App
