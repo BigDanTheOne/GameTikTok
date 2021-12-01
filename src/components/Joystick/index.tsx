@@ -4,6 +4,8 @@ import css from './styles.module.sass'
 import images from '../../images'
 import store from '../../store'
 import mergeRefs from 'react-merge-refs'
+import ym from 'react-yandex-metrika';
+
 
 const min = 20
 const max = 200
@@ -65,6 +67,7 @@ export default function Joystick() {
       store.prevGame()
       setIsNormilizing(true)
     }
+    ym(86698447,'reachGoal','Swipe')
   }
 
   return (
