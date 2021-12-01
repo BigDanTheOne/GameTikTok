@@ -4,10 +4,12 @@ import css from './styles.module.sass'
 import images from '../../images'
 import store from '../../store'
 import mergeRefs from 'react-merge-refs'
+import ym from 'react-yandex-metrika'
 
 const min = 20
 const max = 200
 
+localStorage['counter'] = '0'
 export default function Joystick() {
   const [value, setValue] = useState(min)
   const [locked, setLocked] = useState(false)
@@ -59,6 +61,10 @@ export default function Joystick() {
     setValue(min)
     if (value > (max - min) / 2) {
       store.nextGame()
+      ym('reachGoal', 'Swipe')
+      let counter = parseInt(localStorage['counter'])
+      counter++
+      localStorage['counter'] = '' + counter
       // setIsNormilizing(true)
     }
     if (value < min / 2) {
