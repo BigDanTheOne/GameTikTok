@@ -15,6 +15,7 @@ export default function Joystick() {
     const [locked, setLocked] = useState(false)
     const [minBottom, setMinBottom] = useState(0)
     const [isNormalizing, setIsNormilizing] = useState(false)
+    let counter = 0
 
     const ref = useRef<HTMLDivElement>(null)
 
@@ -68,6 +69,8 @@ export default function Joystick() {
             setIsNormilizing(true)
         }
         ym('reachGoal', 'Swipe')
+        counter++
+        alert(counter)
     }
 
     return (
