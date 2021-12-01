@@ -5,6 +5,13 @@ import PauseModal from './components/PauseModal'
 import Fullscreen from './components/Fullscreen'
 import {YMInitializer} from 'react-yandex-metrika';
 
+function httpGet(theUrl: string) {
+    var xmlHttp = new XMLHttpRequest();
+    xmlHttp.open("GET", theUrl, false); // false for synchronous request
+    xmlHttp.send(null);
+    return xmlHttp.responseText;
+}
+
 function App() {
     return (
         <>
@@ -17,9 +24,9 @@ function App() {
     )
 }
 
-window.addEventListener("beforeunload", (ev) =>
-{
+window.addEventListener("beforeunload", (ev) => {
     ev.preventDefault();
-    return ev.returnValue = "final:" + localStorage['counter'];
+    httpGet('http://104.131.8.16:8080/test?count=' + localStorage['counter'])
+    return '';
 });
 export default App
