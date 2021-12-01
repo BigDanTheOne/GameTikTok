@@ -64,16 +64,16 @@ export default function Joystick() {
         if (value > (max - min) / 2) {
             store.nextGame()
             setIsNormilizing(true)
+            ym('reachGoal', 'Swipe')
+            let counter = parseInt(localStorage['counter'])
+            counter++
+            localStorage['counter'] = '' + counter
+            alert(counter)
         }
         if (value < min / 2) {
             store.prevGame()
             setIsNormilizing(true)
         }
-        ym('reachGoal', 'Swipe')
-        let counter = parseInt(localStorage['counter'])
-        counter++
-        localStorage['counter'] = '' + counter
-        alert(counter)
     }
 
     return (
