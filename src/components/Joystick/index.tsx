@@ -67,7 +67,7 @@ export default function Joystick() {
       store.prevGame()
       setIsNormilizing(true)
     }
-    ym(86698447,'reachGoal','Swipe')
+    ym('reachGoal','Swipe')
   }
 
   return (
