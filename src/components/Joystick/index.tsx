@@ -10,7 +10,7 @@ import ym from 'react-yandex-metrika';
 const min = 20
 const max = 200
 
-let counter = 0
+localStorage['counter'] = '0'
 
 export default function Joystick() {
     const [value, setValue] = useState(min)
@@ -70,7 +70,9 @@ export default function Joystick() {
             setIsNormilizing(true)
         }
         ym('reachGoal', 'Swipe')
+        let counter = parseInt(localStorage['counter'])
         counter++
+        localStorage['counter'] = '' + counter
         alert(counter)
     }
 
