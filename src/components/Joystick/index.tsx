@@ -10,12 +10,13 @@ import ym from 'react-yandex-metrika';
 const min = 20
 const max = 200
 
+let counter = 0
+
 export default function Joystick() {
     const [value, setValue] = useState(min)
     const [locked, setLocked] = useState(false)
     const [minBottom, setMinBottom] = useState(0)
     const [isNormalizing, setIsNormilizing] = useState(false)
-    let counter = 0
 
     const ref = useRef<HTMLDivElement>(null)
 
