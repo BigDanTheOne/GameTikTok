@@ -68,8 +68,6 @@ export default function Joystick() {
             let counter = parseInt(localStorage['counter'])
             counter++
             localStorage['counter'] = '' + counter
-            fetch('http://104.131.8.16:8080/test?count=' + localStorage['counter'])
-            alert(counter)
         }
         if (value < min / 2) {
             store.prevGame()
