@@ -42,9 +42,8 @@ function getOS() {
 
 function sendSessionInfo(reason: string) {
     let timings = JSON.parse(localStorage['timings'])
-
     let time = new Date()
-    timings.push(time.getTime() - parseInt(localStorage['last_time']))
+    timings.push(time.getTime())
     localStorage['timings'] = JSON.stringify(timings)
 
     let session = {
@@ -54,7 +53,6 @@ function sendSessionInfo(reason: string) {
         reason: reason
     };
 
-    initStorage()
 
 
     let response = fetch('http://104.131.8.16:8081/stats', {
@@ -64,6 +62,9 @@ function sendSessionInfo(reason: string) {
         },
         body: JSON.stringify(session)
     })
+
+    initStorage()
+
 }
 
 const os = getOS()
