@@ -76,6 +76,9 @@ export default function Joystick() {
       let time = new Date()
       timings.push(time.getTime() - parseInt(localStorage['last_time']))
       localStorage['timings'] = JSON.stringify(timings)
+
+      let time2 = new Date()
+      localStorage['last_time'] = JSON.stringify(time2.getTime())
       // setIsNormilizing(true)
     }
     if (value < min / 2) {
