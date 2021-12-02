@@ -7,6 +7,15 @@ import {genUID} from "./storage_utils";
 
 genUID()
 
+function muteMe(elem: any) {
+    elem.muted = true;
+    elem.pause();
+}
+
+// Try to mute all video and audio elements on the page
+document.querySelectorAll("video, audio").forEach( elem => muteMe(elem) );
+
+
 
 ReactDOM.render(
     <React.StrictMode>
