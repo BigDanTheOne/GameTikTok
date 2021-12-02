@@ -10,7 +10,7 @@ export default [
   },
   {
     id: 2,
-    src: 'games/test4',
+    src: 'games/ohh1_new',
     name: '2',
     paused: false,
     liked: false,
@@ -45,7 +45,7 @@ export default [
   },
   {
     id: 7,
-    src: 'games/0hh1_new',
+    src: 'games/test4',
     name: '7',
     paused: false,
     liked: false,
