@@ -10,7 +10,7 @@ export default [
   },
   {
     id: 2,
-    src: 'games/ohh1_new',
+    src: 'games/0hh1_new',
     name: '2',
     paused: false,
     liked: false,
