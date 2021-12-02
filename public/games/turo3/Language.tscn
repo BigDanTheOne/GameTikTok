@@ -1,21 +1,44 @@
 [gd_scene load_steps=3 format=2]
 
-[ext_resource path="res://Language.gd" type="Script" id=1]
 [ext_resource path="res://Fonts/jomhuria.font" type="BitmapFont" id=2]
 
+[sub_resource type="GDScript" id=1]
+script/source = "extends Control
+
+
+func _ready():
+	if not G.is_language_selected:
+		get_tree().set_auto_accept_quit(false)
+
+func _on_EO_pressed():
+	G.Settings.set_value(\"language\", \"language\", \"eo\")
+	G.Settings.save(G.settings_file)
+	G.is_language_selected = true
+	get_tree().change_scene(\"res://Menu.tscn\")
+
+func _on_EN_pressed():
+	G.Settings.set_value(\"language\", \"language\", \"en\")
+	G.Settings.save(G.settings_file)
+	G.is_language_selected = true
+	get_tree().change_scene(\"res://Menu.tscn\")
+"
+
 [node name="Language" type="Control"]
-script = ExtResource( 1 )
+script = SubResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="EO" type="Button" parent="."]
 margin_top = 500.0
 margin_right = 563.0
 margin_bottom = 688.0
 rect_scale = Vector2( 0.8, 0.8 )
-custom_fonts/font = ExtResource( 2 )
 custom_colors/font_color_disabled = Color( 0, 0, 0, 1 )
 custom_colors/font_color = Color( 1, 1, 1, 1 )
 custom_colors/font_color_hover = Color( 1, 1, 1, 1 )
 custom_colors/font_color_pressed = Color( 1, 1, 1, 1 )
+custom_fonts/font = ExtResource( 2 )
 text = "Elektu min!"
 
 [node name="BG" type="Polygon2D" parent="EO"]
@@ -31,8 +54,8 @@ margin_bottom = 344.0
 rect_scale = Vector2( 0.6, 0.6 )
 mouse_filter = 1
 size_flags_vertical = 0
-custom_fonts/font = ExtResource( 2 )
 custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_fonts/font = ExtResource( 2 )
 text = "Esperanto"
 align = 1
 valign = 1
@@ -42,11 +65,11 @@ margin_top = 250.0
 margin_right = 563.0
 margin_bottom = 438.0
 rect_scale = Vector2( 0.8, 0.8 )
-custom_fonts/font = ExtResource( 2 )
 custom_colors/font_color_disabled = Color( 0, 0, 0, 1 )
 custom_colors/font_color = Color( 1, 1, 1, 1 )
 custom_colors/font_color_hover = Color( 1, 1, 1, 1 )
 custom_colors/font_color_pressed = Color( 1, 1, 1, 1 )
+custom_fonts/font = ExtResource( 2 )
 text = "Choose me!"
 
 [node name="BG" type="Polygon2D" parent="EN"]
@@ -62,8 +85,8 @@ margin_bottom = 343.0
 rect_scale = Vector2( 0.6, 0.6 )
 mouse_filter = 1
 size_flags_vertical = 0
-custom_fonts/font = ExtResource( 2 )
 custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_fonts/font = ExtResource( 2 )
 text = "English"
 align = 1
 valign = 1
