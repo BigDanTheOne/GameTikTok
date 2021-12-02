@@ -4,4 +4,3 @@
 
 [node name="Init" type="Node"]
 script = ExtResource( 1 )
-

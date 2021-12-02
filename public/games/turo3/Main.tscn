@@ -95,8 +95,8 @@ margin_bottom = 267.0
 rect_scale = Vector2( 0.6, 0.6 )
 mouse_filter = 1
 size_flags_vertical = 0
-custom_fonts/font = ExtResource( 2 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = ExtResource( 2 )
 text = "Here is the end of infinity"
 align = 1
 valign = 1
@@ -165,10 +165,10 @@ margin_right = 450.0
 margin_bottom = 79.0
 rect_scale = Vector2( 1, 0.885 )
 mouse_filter = 1
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_fonts/font = ExtResource( 2 )
 custom_styles/fg = SubResource( 4 )
 custom_styles/bg = SubResource( 5 )
-custom_fonts/font = ExtResource( 2 )
-custom_colors/font_color = Color( 1, 1, 1, 1 )
 max_value = 1000.0
 value = 100.0
 percent_visible = false
@@ -178,8 +178,8 @@ visible = false
 margin_right = 750.0
 margin_bottom = 132.0
 rect_scale = Vector2( 0.6, 0.6 )
-custom_fonts/font = ExtResource( 2 )
 custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_fonts/font = ExtResource( 2 )
 text = "X2"
 align = 1
 valign = 1
@@ -187,18 +187,18 @@ valign = 1
 [node name="Increase" type="Tween" parent="Canvas/look_Ink"]
 
 [node name="look_Record" type="Label" parent="Canvas"]
-margin_left = 320.0
+margin_left = 7.0
 margin_top = 70.0
-margin_right = 558.0
+margin_right = 245.0
 margin_bottom = 159.0
 mouse_filter = 1
 size_flags_vertical = 0
-custom_fonts/font = ExtResource( 2 )
 custom_colors/font_color = Color( 1, 1, 1, 1 )
 custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
 custom_constants/shadow_offset_x = 2
 custom_constants/shadow_offset_y = 2
 custom_constants/shadow_as_outline = 1
+custom_fonts/font = ExtResource( 2 )
 text = "12345m"
 align = 2
 valign = 1
@@ -208,22 +208,25 @@ repeat = true
 playback/repeat = true
 
 [node name="look_Height" type="Label" parent="Canvas"]
-margin_left = 390.0
+margin_left = 10.0
 margin_top = 140.0
-margin_right = 628.0
+margin_right = 248.0
 margin_bottom = 229.0
 rect_scale = Vector2( 0.7, 0.7 )
 mouse_filter = 1
 size_flags_vertical = 0
-custom_fonts/font = ExtResource( 2 )
 custom_colors/font_color = Color( 1, 1, 1, 1 )
 custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
 custom_constants/shadow_offset_x = 2
 custom_constants/shadow_offset_y = 2
 custom_constants/shadow_as_outline = 1
+custom_fonts/font = ExtResource( 2 )
 text = "12345m"
 align = 2
 valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="FPS" type="Label" parent="Canvas"]
 visible = false
@@ -234,8 +237,8 @@ margin_bottom = 99.0
 rect_scale = Vector2( 0.5, 0.5 )
 mouse_filter = 1
 size_flags_vertical = 0
-custom_fonts/font = ExtResource( 2 )
 custom_colors/font_color = Color( 0.458824, 0.458824, 0.458824, 1 )
+custom_fonts/font = ExtResource( 2 )
 text = "123"
 valign = 1
 

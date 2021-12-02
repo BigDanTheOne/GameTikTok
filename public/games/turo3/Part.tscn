@@ -11,4 +11,3 @@ script = ExtResource( 1 )
 
 [node name="Look" type="Polygon2D" parent="."]
 polygon = PoolVector2Array( 10, -10, -10, -10, -10, 10, 10, 10 )
-

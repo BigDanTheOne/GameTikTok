@@ -1,59 +1,87 @@
 [gd_scene load_steps=21 format=2]
 
-[ext_resource path="res://Settings.gd" type="Script" id=1]
 [ext_resource path="res://Themes/toggle_button_off.png" type="Texture" id=2]
 [ext_resource path="res://Themes/toggle_button_on.png" type="Texture" id=3]
 [ext_resource path="res://Fonts/jomhuria.font" type="BitmapFont" id=4]
 [ext_resource path="res://GUI/back.png" type="Texture" id=5]
 
+[sub_resource type="GDScript" id=16]
+script/source = "extends Control
+
+
+onready var White = $White
+onready var Black = $Black
+
+func _ready():
+	get_tree().set_auto_accept_quit(false)
+	$Sounds.set_pressed(G.Settings.get_value(\"audio\", \"sounds\", true))
+	$Music.set_pressed(G.Settings.get_value(\"audio\", \"music\", true))
+	get_node(G.Settings.get_value(\"color\", \"color\", \"Black\")).set_pressed(true)
+
+func _on_Sounds_toggled( b ):
+	G.Settings.set_value(\"audio\", \"sounds\", b)
+	G.Settings.save(G.settings_file)
+
+func _on_Music_toggled( b ):
+	G.Settings.set_value(\"audio\", \"music\", b)
+	G.Settings.save(G.settings_file)
+
+func _on_Back_pressed():
+	get_tree().change_scene(\"res://Menu.tscn\")
+
+
+func _on_Black_pressed():
+	G.Settings.set_value(\"color\", \"color\", \"Black\")
+	G.Settings.save(G.settings_file)
+	White.set_pressed(false)
+	Black.set_pressed(true)
+
+func _on_White_pressed():
+	G.Settings.set_value(\"color\", \"color\", \"White\")
+	G.Settings.save(G.settings_file)
+	White.set_pressed(true)
+	Black.set_pressed(false)
+
+func _on_Language_pressed():
+	get_tree().change_scene(\"res://Language.tscn\")
+
+func _on_About_pressed():
+	get_tree().change_scene(\"res://About.tscn\")
+"
+
 [sub_resource type="StyleBoxEmpty" id=1]
 
-
 [sub_resource type="StyleBoxFlat" id=2]
-
 bg_color = Color( 0.392157, 0.866667, 0.0901961, 1 )
 
 [sub_resource type="StyleBoxEmpty" id=3]
 
-
 [sub_resource type="StyleBoxEmpty" id=4]
-
 
 [sub_resource type="StyleBoxEmpty" id=5]
 
-
 [sub_resource type="StyleBoxEmpty" id=6]
-
 
 [sub_resource type="StyleBoxEmpty" id=7]
 
-
 [sub_resource type="StyleBoxEmpty" id=8]
-
 
 [sub_resource type="StyleBoxEmpty" id=9]
 
-
 [sub_resource type="StyleBoxEmpty" id=10]
-
 
 [sub_resource type="StyleBoxEmpty" id=11]
 
-
 [sub_resource type="StyleBoxFlat" id=12]
-
 bg_color = Color( 0.741176, 0.741176, 0.741176, 1 )
 
 [sub_resource type="StyleBoxFlat" id=13]
-
 bg_color = Color( 0.458824, 0.458824, 0.458824, 1 )
 
 [sub_resource type="StyleBoxFlat" id=14]
-
 bg_color = Color( 0.741176, 0.741176, 0.741176, 1 )
 
 [sub_resource type="StyleBoxEmpty" id=15]
-
 
 [node name="Settings" type="Control"]
 anchor_right = 1.0
@@ -62,20 +90,20 @@ margin_left = 450.0
 margin_top = 150.0
 margin_right = -110.0
 margin_bottom = -810.0
-script = ExtResource( 1 )
+script = SubResource( 16 )
 
 [node name="Music" type="CheckButton" parent="."]
 margin_left = -400.0
 margin_top = 100.0
 margin_right = 100.0
 margin_bottom = 200.0
-custom_icons/off = ExtResource( 2 )
-custom_icons/on = ExtResource( 3 )
-custom_fonts/font = ExtResource( 4 )
 custom_colors/font_color_disabled = Color( 1, 1, 1, 1 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 custom_colors/font_color_hover = Color( 0, 0, 0, 1 )
 custom_colors/font_color_pressed = Color( 0, 0, 0, 1 )
+custom_fonts/font = ExtResource( 4 )
+custom_icons/off = ExtResource( 2 )
+custom_icons/on = ExtResource( 3 )
 pressed = true
 text = "Music"
 
@@ -84,13 +112,13 @@ margin_left = -400.0
 margin_top = 250.0
 margin_right = 100.0
 margin_bottom = 350.0
-custom_icons/off = ExtResource( 2 )
-custom_icons/on = ExtResource( 3 )
-custom_fonts/font = ExtResource( 4 )
 custom_colors/font_color_disabled = Color( 1, 1, 1, 1 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 custom_colors/font_color_hover = Color( 0, 0, 0, 1 )
 custom_colors/font_color_pressed = Color( 0, 0, 0, 1 )
+custom_fonts/font = ExtResource( 4 )
+custom_icons/off = ExtResource( 2 )
+custom_icons/on = ExtResource( 3 )
 pressed = true
 text = "Sounds"
 
@@ -99,13 +127,13 @@ margin_left = -400.0
 margin_top = 450.0
 margin_right = -150.0
 margin_bottom = 550.0
-custom_styles/hover = SubResource( 1 )
-custom_styles/pressed = SubResource( 2 )
-custom_styles/normal = SubResource( 3 )
-custom_fonts/font = ExtResource( 4 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 custom_colors/font_color_hover = Color( 0.741176, 0.741176, 0.741176, 1 )
 custom_colors/font_color_pressed = Color( 0, 0, 0, 1 )
+custom_fonts/font = ExtResource( 4 )
+custom_styles/hover = SubResource( 1 )
+custom_styles/pressed = SubResource( 2 )
+custom_styles/normal = SubResource( 3 )
 toggle_mode = true
 text = "Black"
 
@@ -114,13 +142,13 @@ margin_left = -150.0
 margin_top = 450.0
 margin_right = 100.0
 margin_bottom = 550.0
-custom_styles/hover = SubResource( 1 )
-custom_styles/pressed = SubResource( 2 )
-custom_styles/normal = SubResource( 3 )
-custom_fonts/font = ExtResource( 4 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 custom_colors/font_color_hover = Color( 0.741176, 0.741176, 0.741176, 1 )
 custom_colors/font_color_pressed = Color( 0, 0, 0, 1 )
+custom_fonts/font = ExtResource( 4 )
+custom_styles/hover = SubResource( 1 )
+custom_styles/pressed = SubResource( 2 )
+custom_styles/normal = SubResource( 3 )
 toggle_mode = true
 text = "White"
 
@@ -130,14 +158,14 @@ margin_top = 676.52
 margin_right = 240.147
 margin_bottom = 782.52
 rect_scale = Vector2( 0.7, 0.7 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_color_hover = Color( 0.741176, 0.741176, 0.741176, 1 )
+custom_colors/font_color_pressed = Color( 0.458824, 0.458824, 0.458824, 1 )
+custom_fonts/font = ExtResource( 4 )
 custom_styles/hover = SubResource( 4 )
 custom_styles/pressed = SubResource( 5 )
 custom_styles/focus = SubResource( 6 )
 custom_styles/normal = SubResource( 7 )
-custom_fonts/font = ExtResource( 4 )
-custom_colors/font_color = Color( 0, 0, 0, 1 )
-custom_colors/font_color_hover = Color( 0.741176, 0.741176, 0.741176, 1 )
-custom_colors/font_color_pressed = Color( 0.458824, 0.458824, 0.458824, 1 )
 text = "Lingvo/Language"
 
 [node name="About" type="Button" parent="."]
@@ -146,14 +174,14 @@ margin_top = 742.478
 margin_right = -12.0897
 margin_bottom = 870.478
 rect_scale = Vector2( 0.7, 0.7 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_color_hover = Color( 0.741176, 0.741176, 0.741176, 1 )
+custom_colors/font_color_pressed = Color( 0.458824, 0.458824, 0.458824, 1 )
+custom_fonts/font = ExtResource( 4 )
 custom_styles/hover = SubResource( 8 )
 custom_styles/pressed = SubResource( 9 )
 custom_styles/focus = SubResource( 10 )
 custom_styles/normal = SubResource( 11 )
-custom_fonts/font = ExtResource( 4 )
-custom_colors/font_color = Color( 0, 0, 0, 1 )
-custom_colors/font_color_hover = Color( 0.741176, 0.741176, 0.741176, 1 )
-custom_colors/font_color_pressed = Color( 0.458824, 0.458824, 0.458824, 1 )
 text = "About"
 
 [node name="BG_top" type="Polygon2D" parent="."]
@@ -170,8 +198,8 @@ margin_left = 100.0
 margin_right = 767.0
 margin_bottom = 117.0
 rect_scale = Vector2( 0.6, 0.6 )
-custom_fonts/font = ExtResource( 4 )
 custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_fonts/font = ExtResource( 4 )
 text = "Settings"
 align = 1
 valign = 1
