@@ -5,8 +5,9 @@ import App from './App'
 import reportWebVitals from './reportWebVitals'
 import {initStorage} from "./storage_utils";
 
-
-initStorage()
+if (localStorage.getItem('cleared') === null) {
+    initStorage()
+}
 
 ReactDOM.render(
     <React.StrictMode>
