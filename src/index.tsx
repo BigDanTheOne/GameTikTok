@@ -3,12 +3,10 @@ import ReactDOM from 'react-dom'
 import './styles/globals.sass'
 import App from './App'
 import reportWebVitals from './reportWebVitals'
+import {initStorage} from "./storage_utils";
 
-let date = new Date()
-localStorage['start_time'] = '' + date.getTime()
-localStorage['last_time'] = '' + date.getTime()
-localStorage['timings'] = JSON.stringify([])
 
+initStorage()
 
 ReactDOM.render(
     <React.StrictMode>
