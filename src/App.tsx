@@ -36,6 +36,8 @@ function getOS() {
         os = 'Android';
     } else if (!os && /Linux/.test(platform)) {
         os = 'Linux';
+    } else {
+        os = 'unknown'
     }
     return os;
 }
@@ -50,7 +52,8 @@ function sendSessionInfo(reason: string) {
         start_time: parseInt(localStorage['start_time']),
         counter: parseInt(localStorage['counter']),
         timings: JSON.parse(localStorage['timings']),
-        reason: reason
+        reason: reason,
+        os: getOS()
     };
 
 
@@ -67,7 +70,7 @@ function sendSessionInfo(reason: string) {
 
 }
 
-const os = getOS()
+
 // if (os == 'iOS') {
 //     window.addEventListener('mouseout', (ev) => {
 //         sendSessionInfo()
