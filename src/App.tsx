@@ -40,6 +40,12 @@ function getOS() {
 }
 
 function sendSessionInfo(reason: string) {
+    let timings = JSON.parse(localStorage['timings'])
+
+    let time = new Date()
+    timings.push(time.getTime() - parseInt(localStorage['last_time']))
+    localStorage['timings'] = JSON.stringify(timings)
+
     let session = {
         start_time: parseInt(localStorage['start_time']),
         counter: parseInt(localStorage['counter']),
