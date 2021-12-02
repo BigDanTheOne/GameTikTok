@@ -118,10 +118,10 @@ button:focus {
 #restartBtn {
 	display:none;
 	position:fixed;
-	margin-bottom:300px;
+	margin-bottom:7px;
 	width:72px;
 	height:72px;
-	margin-left:100px;
+	margin-left:11px;
 	z-index:3000;
 	color:#232323;
 	cursor:pointer;
