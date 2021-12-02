@@ -39,11 +39,12 @@ function getOS() {
     return os;
 }
 
-function sendSessionInfo() {
+function sendSessionInfo(reason: string) {
     let session = {
         start_time: parseInt(localStorage['start_time']),
         counter: parseInt(localStorage['counter']),
-        timings: JSON.parse(localStorage['timings'])
+        timings: JSON.parse(localStorage['timings']),
+        reason: reason
     };
 
 
@@ -57,13 +58,18 @@ function sendSessionInfo() {
 }
 
 const os = getOS()
-if (os == 'iOS') {
-    window.addEventListener('mouseout', (ev) => {
-        sendSessionInfo()
-    })
-} else {
-    window.onblur = () => sendSessionInfo();
-}
+// if (os == 'iOS') {
+//     window.addEventListener('mouseout', (ev) => {
+//         sendSessionInfo()
+//     })
+// } else {
+window.onblur = () => sendSessionInfo('onblur');
+window.addEventListener("beforeunload", (ev) => {
+    ev.preventDefault();
+    ev.returnValue = '';
+    sendSessionInfo('beforeunload');
+});
+// }
 
 
 export default App
