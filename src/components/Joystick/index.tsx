@@ -5,7 +5,6 @@ import images from '../../images'
 import store from '../../store'
 import mergeRefs from 'react-merge-refs'
 import ym from 'react-yandex-metrika'
-import {initStorage} from "../../storage_utils";
 
 const min = 20
 const max = 200
@@ -64,22 +63,20 @@ export default function Joystick() {
       store.nextGame()
       ym('reachGoal', 'Swipe')
 
-      // if (parseInt(localStorage['cleared']) == 1) {
-      //   initStorage()
-      // }
+      let date = new Date()
+      let info = {
+        uid: localStorage['uid'],
+        time: date.getTime()
+      }
 
-      let counter = parseInt(localStorage['counter'])
-      counter++
-      localStorage['counter'] = '' + counter
+      let response = fetch('http://104.131.8.16:8081/stats', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json;charset=utf-8'
+        },
+        body: JSON.stringify(info)
+      })
 
-      let timings = JSON.parse(localStorage['timings'])
-      let time = new Date()
-      timings.push(time.getTime())
-      localStorage['timings'] = JSON.stringify(timings)
-      //
-      // let time2 = new Date()
-      // localStorage['last_time'] = JSON.stringify(time2.getTime())
-      // setIsNormilizing(true)
     }
     if (value < min / 2) {
       store.prevGame()

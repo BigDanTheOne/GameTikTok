@@ -1,6 +1,5 @@
-export function initStorage() {
-    let date = new Date()
-    localStorage['start_time'] = '' + date.getTime()
-    localStorage['timings'] = JSON.stringify([])
-    localStorage['counter'] = '0'
+import {nanoid} from 'nanoid'
+
+export function genUID() {
+    localStorage['uid'] = nanoid()
 }

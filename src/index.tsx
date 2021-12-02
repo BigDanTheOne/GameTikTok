@@ -3,12 +3,9 @@ import ReactDOM from 'react-dom'
 import './styles/globals.sass'
 import App from './App'
 import reportWebVitals from './reportWebVitals'
-import {initStorage} from "./storage_utils";
+import {genUID} from "./storage_utils";
 
-// if (localStorage.getItem('cleared') === null) {
-//     initStorage()
-// }
-initStorage()
+genUID()
 
 
 ReactDOM.render(
