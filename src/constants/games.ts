@@ -24,7 +24,7 @@ export default [
   },
   {
     id: 4,
-    src: 'games/breaklock',
+    src: 'games/test4',
     name: '4',
     paused: false,
     liked: false,
