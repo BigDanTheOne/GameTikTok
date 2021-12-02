@@ -53,7 +53,7 @@ function sendSessionInfo(reason: string) {
         reason: reason
     };
 
-    localStorage['cleared'] = '1'
+    localStorage['counter'] = '0'
 
 
     let response = fetch('http://104.131.8.16:8081/stats', {

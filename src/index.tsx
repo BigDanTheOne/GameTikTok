@@ -5,9 +5,10 @@ import App from './App'
 import reportWebVitals from './reportWebVitals'
 import {initStorage} from "./storage_utils";
 
-if (localStorage.getItem('cleared') === null) {
-    initStorage()
-}
+// if (localStorage.getItem('cleared') === null) {
+//     initStorage()
+// }
+localStorage['counter'] = '0'
 
 ReactDOM.render(
     <React.StrictMode>
