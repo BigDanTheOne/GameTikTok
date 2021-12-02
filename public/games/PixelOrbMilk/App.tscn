@@ -2,7 +2,7 @@
 
 [ext_resource path="res://Puzzle.tscn" type="PackedScene" id=1]
 [ext_resource path="res://GUI/svg/gui_360.svg" type="Texture" id=2]
-[ext_resource path="res://sword-big.png" type="Texture" id=3]
+[ext_resource path="res://milk-big.png" type="Texture" id=3]
 [ext_resource path="res://GUI/buttons_v2/gui_nosound.png" type="Texture" id=4]
 [ext_resource path="res://GUI/buttons_v2/gui_sound.png" type="Texture" id=5]
 [ext_resource path="res://Scripts/GUI.gd" type="Script" id=6]
@@ -10,7 +10,7 @@
 [ext_resource path="res://Scripts/Audio.gd" type="Script" id=8]
 [ext_resource path="res://Audio/Win.ogg" type="AudioStream" id=9]
 [ext_resource path="res://Audio/Click.ogg" type="AudioStream" id=10]
-[ext_resource path="res://Sprites/spritesheet12.png" type="Texture" id=11]
+[ext_resource path="res://Sprites/milk-small.png" type="Texture" id=11]
 [ext_resource path="res://Scripts/Spritesheet.gd" type="Script" id=12]
 [ext_resource path="res://Sprites/unplayed.png" type="Texture" id=16]
 [ext_resource path="res://GUI/buttons_v2/gui_menu.png" type="Texture" id=18]

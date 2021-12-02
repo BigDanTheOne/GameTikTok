@@ -17,7 +17,7 @@ export default [
   },
   {
     id: 3,
-    src: 'games/PixelOrbSword',
+    src: 'games/tree-invaders',
     name: '3',
     paused: false,
     liked: false,
@@ -31,14 +31,14 @@ export default [
   },
   {
     id: 5,
-    src: 'games/tree-invaders',
+    src: 'games/regretris',
     name: '5',
     paused: false,
     liked: false,
   },
   {
     id: 6,
-    src: 'games/regretris',
+    src: 'games/PixelOrbSword',
     name: '6',
     paused: false,
     liked: false,
@@ -52,14 +52,14 @@ export default [
   },
   {
     id: 8,
-    src: 'games/PixelOrbMilk',
+    src: 'games/2048',
     name: '8',
     paused: false,
     liked: false,
   },
   {
     id: 9,
-    src: 'games/2048',
+    src: 'games/PixelOrbMilk',
     name: '9',
     paused: false,
     liked: false,
