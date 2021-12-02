@@ -17,7 +17,7 @@ export default [
   },
   {
     id: 3,
-    src: 'games/tree-invaders',
+    src: 'games/turo3',
     name: '3',
     paused: false,
     liked: false,
