@@ -45,14 +45,14 @@ export default [
   },
   {
     id: 7,
-    src: 'games/test4',
+    src: 'games/2048',
     name: '7',
     paused: false,
     liked: false,
   },
   {
     id: 8,
-    src: 'games/2048',
+    src: 'games/test4',
     name: '8',
     paused: false,
     liked: false,
