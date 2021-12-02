@@ -56,13 +56,14 @@ function sendSessionInfo() {
     })
 }
 
-window.onblur = () => sendSessionInfo();
-
-
 const os = getOS()
-alert(os)
-window.addEventListener('mouseout', (ev) => {
-    sendSessionInfo()
-});
+if (os == 'iOS') {
+    window.addEventListener('mouseout', (ev) => {
+        sendSessionInfo()
+    })
+} else {
+    window.onblur = () => sendSessionInfo();
+}
+
 
 export default App
