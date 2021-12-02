@@ -10,7 +10,7 @@ export default [
   },
   {
     id: 2,
-    src: 'games/hextris',
+    src: 'games/test4',
     name: '2',
     paused: false,
     liked: false,
@@ -24,7 +24,7 @@ export default [
   },
   {
     id: 4,
-    src: 'games/test4',
+    src: 'games/hextris',
     name: '4',
     paused: false,
     liked: false,
