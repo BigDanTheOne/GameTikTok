@@ -17,7 +17,7 @@ export default [
   },
   {
     id: 3,
-    src: 'games/turo3',
+    src: 'games/PixelOrbSword',
     name: '3',
     paused: false,
     liked: false,
@@ -38,7 +38,7 @@ export default [
   },
   {
     id: 6,
-    src: 'games/PixelOrbSword',
+    src: 'games/turo3',
     name: '6',
     paused: false,
     liked: false,
