@@ -8,7 +8,8 @@ import {initStorage} from "./storage_utils";
 // if (localStorage.getItem('cleared') === null) {
 //     initStorage()
 // }
-localStorage['counter'] = '0'
+initStorage()
+
 
 ReactDOM.render(
     <React.StrictMode>

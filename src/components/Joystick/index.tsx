@@ -71,10 +71,10 @@ export default function Joystick() {
       let counter = parseInt(localStorage['counter'])
       counter++
       localStorage['counter'] = '' + counter
-      // let timings = JSON.parse(localStorage['timings'])
+      let timings = JSON.parse(localStorage['timings'])
       //
-      // let time = new Date()
-      // timings.push(time.getTime() - parseInt(localStorage['last_time']))
+      let time = new Date()
+      timings.push(time.getTime())
       // localStorage['timings'] = JSON.stringify(timings)
       //
       // let time2 = new Date()

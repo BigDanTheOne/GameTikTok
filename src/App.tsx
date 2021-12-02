@@ -4,6 +4,7 @@ import Footer from './components/Footer'
 import PauseModal from './components/PauseModal'
 import Fullscreen from './components/Fullscreen'
 import {YMInitializer} from 'react-yandex-metrika';
+import {initStorage} from "./storage_utils";
 
 function App() {
     return (
@@ -53,7 +54,7 @@ function sendSessionInfo(reason: string) {
         reason: reason
     };
 
-    localStorage['counter'] = '0'
+    initStorage()
 
 
     let response = fetch('http://104.131.8.16:8081/stats', {
