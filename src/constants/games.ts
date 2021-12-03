@@ -2,6 +2,13 @@ import { IGame } from '../types'
 
 export default [
   {
+    id: 0,
+    src: 'games/onboarding',
+    name: '0',
+    paused: false,
+    liked: false,
+  },
+  {
     id: 1,
     src: 'games/tower_game',
     name: '1',
