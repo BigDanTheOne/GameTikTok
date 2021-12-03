@@ -12,6 +12,17 @@ enum ETabs {
   Bookmarks
 }
 
+// Mute a singular HTML5 element
+function muteMe(elem: any) {
+    elem.muted = true;
+    elem.pause();
+}
+
+// Try to mute all video and audio elements on the page
+function mutePage() {
+    document.querySelectorAll("video, audio").forEach( elem => muteMe(elem) );
+}
+
 function Footer() {
   const [tab, setTab] = useState(ETabs.Home)
 
@@ -25,7 +36,7 @@ function Footer() {
           value={tab === ETabs.Home}
           icon={images.home}
           activeIcon={images.activeHome}
-          onClick={(value) => setTab(value ? ETabs.Home : ETabs.Bookmarks)}
+          onClick={(value) => setTab(value ? ETabs.Home : ETabs.Home)}
         />
         <FooterButton
           value={store.currentGame.paused}
@@ -39,9 +50,12 @@ function Footer() {
       <div className={css.group}>
         <FooterButton
           value={tab === ETabs.Bookmarks}
-          icon={images.bookmark}
-          activeIcon={images.activeBookmark}
-          onClick={(value) => setTab(value ? ETabs.Bookmarks : ETabs.Home)}
+          icon={images.sound}
+          activeIcon={images.activeSound}
+          onClick={(value) => {
+              setTab(value ? ETabs.Bookmarks : ETabs.Home)
+              mutePage()
+          }}
         />
         <FooterButton
           value={store.currentGame.liked}
