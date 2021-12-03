@@ -1,0 +1,17 @@
+doctype html
+include partials/_variables.pug
+html(lang="en")
+  head
+    include partials/_head.pug
+  body
+    #app
+      include partials/_header.pug
+      include partials/_sidebar.pug
+      
+      main.offline
+        img.offline-dog(src="/svg/offline-dog.svg")
+      
+      include partials/_gameover.pug
+      
+    include partials/_javascripts.pug
+    include partials/_schema.pug
