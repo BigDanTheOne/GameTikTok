@@ -8,6 +8,8 @@ func _init():
 
 func _ready():
 	get_tree().set_auto_accept_quit(false)
+	G.Settings.set_value("audio", "music", false)
+	G.Settings.save(G.settings_file)
 
 func _on_Play_pressed():
 	get_tree().change_scene("res://Main.tscn")

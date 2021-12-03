@@ -80,7 +80,7 @@ export default [
   },
   // {
   //   id: 10,
-  //   src: 'games/test4',
+  //   src: 'games/monopong',
   //   name: '10',
   //   paused: false,
   //   liked: false,

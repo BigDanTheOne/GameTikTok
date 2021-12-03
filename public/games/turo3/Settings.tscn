@@ -17,8 +17,10 @@ func _ready():
 	$Sounds.set_pressed(G.Settings.get_value(\"audio\", \"sounds\", true))
 	$Music.set_pressed(G.Settings.get_value(\"audio\", \"music\", true))
 	get_node(G.Settings.get_value(\"color\", \"color\", \"Black\")).set_pressed(true)
+	G.Settings.set_value(\"audio\", \"music\", false)
+	G.Settings.save(G.settings_file)
 
-func _on_Sounds_toggled( b ):
+func _on_Sounds_toggled( b ): 
 	G.Settings.set_value(\"audio\", \"sounds\", b)
 	G.Settings.save(G.settings_file)
 
