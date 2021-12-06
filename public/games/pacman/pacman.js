@@ -9646,7 +9646,9 @@ var homeState = (function(){
         draw: function() {
             renderer.clearMapFrame();
             renderer.beginMapClip();
-            renderer.renderFunc(menu.draw,menu);
+            // renderer.renderFunc(menu.draw,menu);
+            gameMode = GAME_COOKIE;
+            exitTo(preNewGameState);
             renderer.endMapClip();
         },
         update: function() {
