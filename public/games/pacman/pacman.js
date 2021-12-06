@@ -9964,33 +9964,33 @@ var preNewGameState = (function() {
             newGameState.setStartLevel(1);
             exitTo(newGameState, 60);
         });
-    menu.addTextButton("PLAY TURBO",
-        function() { 
-            practiceMode = false;
-            turboMode = true;
-            newGameState.setStartLevel(1);
-            exitTo(newGameState, 60);
-        });
-    menu.addTextButton("PRACTICE",
-        function() { 
-            practiceMode = true;
-            turboMode = false;
-            exitTo(selectActState);
-        });
-    menu.addSpacer(0.5);
-    menu.addTextButton("CUTSCENES",
-        function() { 
-            exitTo(cutSceneMenuState);
-        });
-    menu.addTextButton("ABOUT",
-        function() { 
-            exitTo(aboutGameState);
-        });
-    menu.addSpacer(0.5);
-    menu.addTextButton("BACK",
-        function() {
-            exitTo(homeState);
-        });
+    // menu.addTextButton("PLAY TURBO",
+    //     function() {
+    //         practiceMode = false;
+    //         turboMode = true;
+    //         newGameState.setStartLevel(1);
+    //         exitTo(newGameState, 60);
+    //     });
+    // menu.addTextButton("PRACTICE",
+    //     function() {
+    //         practiceMode = true;
+    //         turboMode = false;
+    //         exitTo(selectActState);
+    //     });
+    // menu.addSpacer(0.5);
+    // menu.addTextButton("CUTSCENES",
+    //     function() {
+    //         exitTo(cutSceneMenuState);
+    //     });
+    // menu.addTextButton("ABOUT",
+    //     function() {
+    //         exitTo(aboutGameState);
+    //     });
+    // menu.addSpacer(0.5);
+    // menu.addTextButton("BACK",
+    //     function() {
+    //         exitTo(homeState);
+    //     });
     menu.backButton = menu.buttons[menu.buttonCount-1];
 
     return {
