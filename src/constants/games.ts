@@ -38,7 +38,7 @@ export default [
   },
   {
     id: 4,
-    src: 'games/regretris',
+    src: 'games/pacman',
     name: '5',
     paused: false,
     liked: false,
