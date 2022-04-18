@@ -1,0 +1,24 @@
+section.game-over(v-if="gameOverScreen" v-cloak)
+  .stripes
+  
+    .child 
+      h2 GAME OVER
+      
+    .child
+      table
+        thead
+          tr
+            th Rounds Played
+            th Correct
+            th Incorrect
+            th Percent
+        tbody
+          tr
+            td(v-text="player.rounds")
+            td(v-text="player.correct")
+            td(v-text="player.incorrect")
+            td(v-text="scorePercent + '%'")
+    
+    .child
+      .button-holder
+        button.button(v-on:click="clearScores()") Play again

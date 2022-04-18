@@ -1,0 +1,61 @@
+//- jQuery and Vue (minified if on prod)
+if testing
+  //-script(src="js/libraries/jquery-3.3.1.js")
+  script(src="js/libraries/vue.js")
+  script.
+    const testing = true;
+else
+  //-script(src="js/libraries/jquery-3.3.1.min.js")
+  script(src="js/libraries/vue.min.js")
+  script.
+    const testing = false;
+
+//- ServiceWorker
+
+script(type="text/javascript").
+  if ('serviceWorker' in navigator) {
+    // Register a service worker hosted at the root of the
+    // site using the default scope.
+    navigator.serviceWorker.register('/service-worker.js').then(function(registration) {
+      console.log('Service worker registration succeeded:', registration);
+
+    }, function(error) {
+      console.log('Service worker registration failed:', error);
+    });
+  } else {
+    console.log('Service workers are not supported.');
+  }
+
+  /*
+  Notification.requestPermission(result => {
+    if (result === 'granted') {
+      //permission granted.
+      navigator.serviceWorker.ready.then(registration => {
+        registration.showNotification('Damn Dog has been updated', {
+          icon: '/android-chrome-96x96.png',
+          vibrate: [500, 100, 500],
+          body: '7 new rounds have been added to damn.dog, bringing the total up to 358.',
+          tag: 'vibration-sample'
+        });
+      });
+    }
+  });
+  */
+
+// Global site tag (gtag.js) - Google Analytics
+script(async src='https://www.googletagmanager.com/gtag/js?id=UA-15129990-16')
+script.
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'UA-15129990-16');
+
+script(src="js/min/damn.vue.min.js")
+
+//- trackJS
+script(src="https://cdn.trackjs.com/agent/v3/latest/t.js" crossorigin)
+script.
+  window.TrackJS && TrackJS.install({
+    token: "9947e081831c42b8aeb3a5fb81a152c4",
+    application: "damndog"
+  });

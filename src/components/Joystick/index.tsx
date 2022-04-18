@@ -95,13 +95,13 @@ export default function Joystick() {
         os: getOS()
       }
 
-      let response = fetch('http://104.131.8.16:8081/stats', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json;charset=utf-8'
-        },
-        body: JSON.stringify(info)
-      })
+//      let response = fetch('http://104.131.8.16:8081/stats', {
+//        method: 'POST',
+//        headers: {
+//          'Content-Type': 'application/json;charset=utf-8'
+//        },
+//        body: JSON.stringify(info)
+//      })
 
     }
     if (value < min / 2) {
